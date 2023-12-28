@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pedidos - Metalica Colombo</title>
+    <link rel="stylesheet" href="pd.css">
+</head>
+<body>
+    <div class="wrapper">
+        <button id="toggle-sidebar" class="toggle-btn">&#9776; Menu</button>
+
+        <div class="sidebar" id="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="#">Orçamentos</a></li>
+                <li><a href="#">Entrada de Caixa</a></li>
+                <li><a href="#">Saída de Caixa</a></li>
+                <li><a href="#">Funcionários</a></li>
+                <li><a href="#">Estoque</a></li>
+            </ul>
+        </div>
+
+        <div class="container" id="content">
+            <h1>Bem-vindo à Metalica Colombo</h1>
+            <h2>Área de Pedidos</h2>
+        <form id="pedido-form">
+            <label for="clienteId">ID Único do Cliente:</label>
+            <input type="text" id="clienteId" required>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" required>
+
+            <label for="tipoServico">Tipo de Serviço:</label>
+            <select id="tipoServico" required>
+                <option value="mezaninos">Mezaninos</option>
+                <option value="coberturas">Coberturas</option>
+                <option value="barracoes">Barracões</option>
+                <option value="portoes">Portões</option>
+                <option value="grades">Grades</option>
+                <option value="calhas">Calhas</option>
+                <option value="gradil">Gradil</option>
+                <option value="guardaCorpo">Guarda Corpo</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="outros">Outros</option>
+            </select>
+
+            <label for="numeroTelefone">Número de Telefone:</label>
+            <input type="tel" id="numeroTelefone" required>
+
+            <label for="observacoes">Observações do Pedido:</label>
+            <textarea id="observacoes"></textarea>
+
+            <label for="valor">Valor em Reais:</label>
+            <input type="text" id="valor" required>
+
+            <button type="button" onclick="inserirPedido()">Inserir Pedido</button>
+        </form>
+    </div>
+    <script src="pd.js"></script>
+</body>
+</html>
